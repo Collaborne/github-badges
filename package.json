@@ -1,0 +1,47 @@
+{
+	"name": "carrot-script-tasks",
+	"version": "0.0.0",
+	"description": "Tasks used in collaborne repos",
+	"author": "Collaborne",
+	"license": "UNLICENSED",
+	"main": "dist/index.js",
+	"source": "src/index.ts",
+	"scripts": {
+		"build": "npm run lint:ts && npm run build:ts --",
+		"build:ts": "tsc -p tsconfig.dist.json --noEmit false",
+		"build:watch": "npm run build -- --watch",
+		"lint": "npm run lint:ts",
+		"lint:ts": "eslint --report-unused-disable-directives $(node -p 'require(\"./tsconfig.dist.json\").include.map(include => `'\\${include}.\\{js,ts,tsx\\}'`).join(\" \")')"
+	},
+	"devDependencies": {
+		"@types/node": "^18.0.0",
+		"@types/mkdirp": "^1.0.2",
+		"eslint": "^8.18.0",
+		"eslint-config-collaborne": "^5.2.1",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-disable": "^2.0.3",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jest": "^26.5.3",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^4.1.0",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-standard": "^4.1.0",
+		"mkdirp": "^1.0.4",
+		"prettier": "^2.7.1",
+		"ts-node": "~10.8.1",
+		"typescript": "~4.7.4"
+	},
+	"overrides": {
+		"eslint-config-standard-react": {
+			"eslint": "^8"
+		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Collaborne/carrot-script-tasks.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Collaborne/carrot-script-tasks/issues"
+	},
+	"homepage": "https://github.com/Collaborne/carrot-script-tasks#readme"
+}
