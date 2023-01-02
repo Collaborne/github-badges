@@ -1,17 +1,17 @@
-# create-badges
+# @collaborne/github-badges
 
-Creates badges(*svg files) from report coverage files.
+Create SVG badges
 
 ## Install
 
 ```bash
-npm install --save @collaborne/create-badges
+npm install --save @collaborne/github-badges
 ```
 
 ## Usage
 
 ```ts
-import { createCoverageBadge } from '@collaborne/create-badges'
+import { createCoverageBadge } from '@collaborne/github-badges'
 
 // Using default params
 createCoverageBadge();

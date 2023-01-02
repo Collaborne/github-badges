@@ -1,7 +1,7 @@
 {
-	"name": "@collaborne/create-badges",
+	"name": "@collaborne/github-badges",
 	"version": "0.0.0",
-	"description": "Create SVG badges for repositories",
+	"description": "Github SVG badges for repositories",
 	"author": "Collaborne",
 	"license": "UNLICENSED",
 	"main": "dist/index.js",
@@ -38,12 +38,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Collaborne/create-badges.git"
+		"url": "git+https://github.com/Collaborne/github-badges.git"
 	},
 	"bugs": {
-		"url": "https://github.com/Collaborne/create-badges/issues"
+		"url": "https://github.com/Collaborne/github-badges/issues"
 	},
-	"homepage": "https://github.com/Collaborne/create-badges#readme",
+	"homepage": "https://github.com/Collaborne/github-badges#readme",
 	"keywords": [
 		"svg",
 		"readme badges",
