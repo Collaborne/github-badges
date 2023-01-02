@@ -43,5 +43,11 @@
 	"bugs": {
 		"url": "https://github.com/Collaborne/carrot-script-tasks/issues"
 	},
-	"homepage": "https://github.com/Collaborne/carrot-script-tasks#readme"
+	"homepage": "https://github.com/Collaborne/carrot-script-tasks#readme",
+	"keywords": [
+		"svg",
+		"readme badges",
+		"create coverage badge reports",
+		"shields.io"
+	]
 }
