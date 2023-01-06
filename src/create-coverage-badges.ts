@@ -4,6 +4,8 @@ import * as path from 'path';
 
 import mkdirp from 'mkdirp';
 
+import { FgBlue, FgCyan, FgGreen, FgRed } from './constants';
+
 interface ReportData {
 	total: number;
 	covered: number;
@@ -39,23 +41,20 @@ const getColor = (coverage: number) => {
 	return 'brightgreen';
 };
 
-const DEFAULT_INPUT_PATH = path.resolve(
-	__dirname,
-	'..',
-	'coverage',
-	'coverage-summary.json',
-);
-
-const DEFAULT_OUTPUT_PATH = path.resolve(__dirname, '..', 'coverage');
+const DEFAULT_INPUT_PATH = path.resolve('coverage', 'coverage-summary.json');
+const DEFAULT_OUTPUT_PATH = path.resolve('coverage');
 
 /** Create coverage badges (svg picture icons) based on icons from shields.io */
 export function createCoverageBadge(
 	inputPath = DEFAULT_INPUT_PATH,
 	outputPath = DEFAULT_OUTPUT_PATH,
 ) {
+	console.group(FgBlue, 'Using these paths for coverage badges:');
+	console.log(`${FgCyan}coverage-summary.json: ${FgGreen}${inputPath}`);
+	console.log(`${FgCyan}output folder for svg's: ${FgGreen}${outputPath}`);
 	const getBadge = (report: TotalReport, key: keyof Report) => {
 		if (!(report && report.total && report.total[key])) {
-			throw new Error('malformed coverage report');
+			throw new Error(`${FgRed} Malformed coverage report`);
 		}
 
 		const coverage =

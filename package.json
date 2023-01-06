@@ -6,6 +6,9 @@
 	"license": "UNLICENSED",
 	"main": "dist/index.js",
 	"source": "src/index.ts",
+	"bin": {
+		"create-coverage-badges": "dist/bin/create-coverage-badges.js"
+	},
 	"scripts": {
 		"build": "npm run lint:ts && npm run build:ts --",
 		"build:ts": "tsc -p tsconfig.dist.json --noEmit false",
