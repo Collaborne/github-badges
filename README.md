@@ -10,6 +10,8 @@ npm install --save @collaborne/github-badges
 
 ## Usage
 
+- import in JS/TS files
+
 ```ts
 import { createCoverageBadge } from '@collaborne/github-badges'
 
@@ -27,7 +29,28 @@ const outputPath = path.resolve(__dirname,'my-other-folder', 'coverage', 'covera
 createCoverageBadge(inputPath, outputPath)
 
 
+
 ```
+
+- as a script in **package.json**
+
+```json
+...
+
+scripts :{
+    ...
+    "predeploy:coverage-badges": "create-coverage-badges"
+    ...
+}
+...
+
+  ```
+
+By default uses for coverage report input: **coverage/coverage-summary.json** , and outputs created svg's into the same **coverage** folder.
+
+Flags for input: `--i` or `-inputPath`
+
+Flags for output: `--o`, `--d`, `-outputPath` or `-dist`
 
 ## License
 
