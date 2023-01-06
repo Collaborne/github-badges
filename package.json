@@ -1,6 +1,6 @@
 {
 	"name": "@collaborne/github-badges",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Github SVG badges for repositories",
 	"author": "Collaborne",
 	"license": "UNLICENSED",
