@@ -29,6 +29,6 @@ if (!outputPath) {
 }
 
 createCoverageBadge(
-	inputPath ? path.resolve(args[inputPath]) : undefined,
-	outputPath ? path.resolve(args[outputPath]) : undefined,
+	inputPath ? path.resolve(args[inputPath] as string) : undefined,
+	outputPath ? path.resolve(args[outputPath] as string) : undefined,
 );

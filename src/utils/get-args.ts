@@ -1,5 +1,5 @@
 export function getArgs() {
-	const args = {};
+	const args: Record<string, string | boolean> = {};
 	process.argv.slice(2, process.argv.length).forEach(arg => {
 		// long arg
 		if (arg.slice(0, 2) === '--') {
